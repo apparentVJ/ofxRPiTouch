@@ -1,5 +1,5 @@
 #ofxRPiTouch
-Addon for using the RaspberryPi 7" Touch Dipsplay
+Addon for using the RaspberryPi 7" Touch Dipsplay [WIP]
 
 ![alt text][logo]
 
