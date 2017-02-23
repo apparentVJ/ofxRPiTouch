@@ -3,12 +3,9 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	touch.init("/dev/input/event2");
+	touch.init("/dev/input/event2");	// change according to your setup (evdev)
 	ofLog()<<touch.getName();
 	
-	ofSetBackground(20);
-	ofSetFramerate(30);
-
 }
 
 //--------------------------------------------------------------
@@ -27,17 +24,6 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
-	// for every touch point we draw a circle of 20 width.
-	
-
-	
-	int x = touch.getCoordTouch().x;
-	int y = touch.getCoordTouch().y;
-
-	cout << "coord x: " << touch.getCoordTouch().x
-	     << "coord y: " << touch.getCoordTouch().y
-		<< endl;
 
 }
 
