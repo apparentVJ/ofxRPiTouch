@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	touch.init("/dev/input/event2");	// change according to your setup (evdev)
+	touch.init("/dev/input/event0");	// change according to your setup (evdev)
 	ofLog()<<touch.getName();
 	
 }
@@ -24,7 +24,21 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	
+	stringstream statusStream;
+    ofSetColor(255,255,255);
+    
+    statusStream << "X: " << touch.getCoordTouch().x << endl
+    << "Y: " << touch.getCoordTouch().y << endl
+    << "BTN: " << touch.getButton() << endl
+    << "mtSlot: " << touch.getMTSlot() + 1 << endl
+    << "absPosX: " << touch.getAbsPos().x << endl
+    << "absPosY: " << touch.getAbsPos().y << endl
+    << "AbsTrackingID: " << touch.getAbsTrackingID() << endl
+    << endl;
+    ofDrawBitmapString(statusStream.str(),20,20);
 
+	
 }
 
 //--------------------------------------------------------------
