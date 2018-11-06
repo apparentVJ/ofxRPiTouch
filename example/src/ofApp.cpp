@@ -3,15 +3,15 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	touch.init("/dev/input/event0");	// change according to your setup (evdev)
-	ofLog()<<touch.getName();
-	
+    touch.init("/dev/input/event0");    // change according to your setup (evdev)
+    ofLog()<<touch.getName();
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 /*
-	cout << "X: " << touch.getCoordTouch().x << endl
+    cout << "X: " << touch.getCoordTouch().x << endl
                   << "Y: " << touch.getCoordTouch().y << endl
                   << "BTN: " << touch.getButton() << endl
                   << "mtSlot: " << touch.getMTSlot() + 1 << endl
@@ -24,8 +24,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	
-	stringstream statusStream;
+    
+    stringstream statusStream;
     ofSetColor(255,255,255);
     
     statusStream << "X: " << touch.getCoordTouch().x << endl
@@ -38,7 +38,7 @@ void ofApp::draw(){
     << endl;
     ofDrawBitmapString(statusStream.str(),20,20);
 
-	
+    
 }
 
 //--------------------------------------------------------------
@@ -99,6 +99,6 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 //--------------------------------------------------------------
 void ofApp::exit(){
 
-	touch.exit();
+    touch.exit();
 
 }
